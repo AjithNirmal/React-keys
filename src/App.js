@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = ()=>{
+  const arr = ["ajith","nirmal","billa","renga","basha"]
+ /*
+  const handleclick = (key,i)=>
+  {
+    console.log(i)
+  }
+  */
+return (<>
+<ol key="Relativelist"> Relative List
+{
+  arr.map((values,i)=>{
+    return(<>
+    <li key={"RelativeList"+ i+1} >{values}{i+1}</li>
+    </>)
+  })
+
+}
+
+
+</ol>
+</>)
+
+
 }
 
 export default App;
